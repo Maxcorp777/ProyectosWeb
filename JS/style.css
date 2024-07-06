@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Merienda', cursive;
+    background-color: #ffffff;
+    color: #ffffff;
+    height: 100vh !important;;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0e1525;
+    color: #eeeee8;
+    border-bottom: 1px solid #dddddd71;
+}
+
+header .logoInicio {
+    display: flex;
+    align-items: center;
+}
+
+header .logoInicio img {
+    width: 50px;
+    border-radius: 10px;
+}
+
+header .logoInicio h1 {
+    margin-left: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Main Section */
+.inicio {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #0e1525;
+    height: auto !important;
+
+}
+
+.inicio .Descripcion {
+    display: grid;
+    flex-direction:row;
+    max-width: 900px;
+    margin: auto; 
+    
+}
+
+.inicio button{
+    padding: 10px;
+    border-style: none !important;
+    border-radius: 5px !important;
+    margin: 30px;
+    font-weight: bold;
+    color: #181819;
+    width: auto;
+    height: auto;
+    background-color: #fffffff4;
+    position: relative;
+    animation-name: sideToSide;
+
+    /*animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;*/
+    font-size: 20px !important;
+   /* transition: transform 0.3s ease;*/
+
+
+}
+
+
+/* Definición de la animación */
+@keyframes sideToSide {
+    0%, 100% {
+      box-shadow: 
+        8px 8px 30px #6833FF,    /* Azul cielo más oscuro y opaco */
+        -8px -8px 30px #FF9C33 /* Lavanda más intensa y opaca */
+    }
+    50% {
+      box-shadow: 
+        8px 12px 30px #FF9C33,    /* Verde menta más saturado y con mayor extensión */
+        -8px -12px 30px #6833FF /* Amarillo sol más intenso y con mayor extensión */
+    }
+  }
+
+.inicio .Descripcion img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Servicios Section */
+.servicios {
+    padding: 40px 20px;
+    background-color: #171717;
+}
+
+.servicios h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+}
+
+.contenido section {
+    text-align: center;
+    max-width: 600px;
+}
+
+.contenido .titulo h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contenido .imgContenido img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    background-color: #0e1525;
+    color: white;
+    padding: 20px 0;
+    text-align: justify;
+    padding: 20px;
+
+}
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer .container .links {
+    margin: 10px 0;
+}
+.footer .container .social-media {
+    margin: 10px 0;
+}
+.footer .container .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+.footer .container .contact {
+    margin: 10px 0;
+}
+/* Responsive Styles (PC)*/
+@media (min-width: 768px) {
+    .contenido {
+        grid-template-columns: 1fr 1fr;
+    }    
+}
+
+@media (min-width: 1024px) {
+    .contenido {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .inicio .Descripcion{
+        display: flex !important;
+    }
+    
+    nav ul li a{
+        display: block !important;
+    }
+}
